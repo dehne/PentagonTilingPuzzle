@@ -1,5 +1,8 @@
 public class Piece {
-    // The shapes and orientations of those shapes the pieces can have possibly have
+    // The shapes and orientations of those shapes the pieces can have possibly have.
+    // A shape is a 3 x 3 array telling whether one of the parts of a piece occupy a
+    // cell on the board. 1 => cell occupied by a piece with this shape; 0 => cell not
+    // occupied.
     // column selector --------------------.
     // row selector --------------------.  |
     // shape selector ---------------.  |  |
@@ -34,8 +37,8 @@ public class Piece {
             {0, 0, 0}
         },
         {               // 5 (Normal L)
-            {1, 1, 0},  // *
-            {1, 0, 0},  // **
+            {1, 0, 0},  // *
+            {1, 1, 0},  // **
             {0, 0, 0}
         },
 
@@ -46,9 +49,9 @@ public class Piece {
             {0, 0, 0}
         },
         {               // 7 (Normal J)
-            {0, 0, 1},  //  *
-            {0, 0, 1},  //  *
-            {0, 1, 0}   // *
+            {0, 1, 0},  //  *
+            {0, 1, 0},  //  *
+            {1, 0, 0}   // *
         },
         {               // 8 (Face-up J)
             {1, 0, 0},  // *
@@ -82,13 +85,19 @@ public class Piece {
         }
     };
 
-    // The possible positions of the pieces
-    // position component selector -----------.
-    // position selector ------------------.  |
-    // piece selector ------------------.  |  |
+    // The possible positions of all the pieces. These were determined 
+    // by inspecting where each of the pieces could possibly fit on the
+    // board.
+    // position component selector -----------.     0 => shape, 1 => x, 2 => y
+    // position selector ------------------.  |     0..number of possible positions - 1
+    // piece selector ------------------.  |  |     0 => Piece A, 1 => Piece B, ... 15 => Piece P
     //                                  |  |  |
     private final static byte positions[ ][ ][ ] = {
-        {               // Piece A (position components are shape, x, y)
+        {   // Piece A
+//           .------------- Shape selector
+//           |  .---------- x position
+//           |  |  .------- y position
+//           |  |  |            
             {1, 2, 0},  // Normal I at (2, 0)
             {1, 6, 0},  //  " @ (6, 0)
             {1, 4, 2},  //  " @ (4, 2)
@@ -97,14 +106,14 @@ public class Piece {
             {0, 5, 3},  //   " @ (5, 3)
             {0, 3, 5}   //   " @ (3, 5)
         },
-        {               // Piece B
-            {2, 0, 3},  // Upside down L (0, 3)
+        {   // Piece B
+            {2, 3, 0},  // Upside down backwards L (3, 0)
             {2, 0, 1},  // 
             {2, 4, 1},  // 
-            {2, 1, 3},  // 
-            {2, 5, 3},  // 
-            {2, 2, 4},  // 
-            {2, 6, 4},  // 
+            {2, 1, 2},  // 
+            {2, 5, 2},  // 
+            {2, 2, 3},  // 
+            {2, 6, 3},  // 
             {2, 3, 4},  // 
             {4, 1, 0},  // Backwards L
             {4, 5, 0},  // 
@@ -116,17 +125,17 @@ public class Piece {
             {4, 1, 4},  // 
             {4, 5, 4}   // 
         },
-        {               // Piece C
-            {2, 1, 0},  // Upside down backwards L
-            {2, 0, 1},
-            {2, 4, 1},
-            {2, 3, 2},
-            {2, 2, 3},
-            {2, 6, 3},
-            {2, 1, 4},
-            {2, 5, 4},
+        {   // Piece C
+            {3, 1, 0},  // Upside down L
+            {3, 0, 1},
+            {3, 4, 1},
+            {3, 3, 2},
+            {3, 2, 3},
+            {3, 6, 3},
+            {3, 1, 4},
+            {3, 5, 4},
         },
-        {               // Piece D
+        {   // Piece D
             {5, 3, 0},  // Normal L
             {5, 2, 1},
             {5, 6, 1},
@@ -136,7 +145,7 @@ public class Piece {
             {5, 4, 3},
             {5, 3, 4},
         },
-        {               // Piece E
+        {   // Piece E
             {8, 1, 1},  // Face up J
             {8, 5, 1},
             {8, 3, 3},
@@ -150,7 +159,7 @@ public class Piece {
             {11, 1, 2},
             {11, 5, 2}
         },
-        {               // Piece F
+        {   // Piece F
             {1, 3, 0},  // Normal I
             {1, 7, 0},
             {1, 1, 2},
@@ -161,13 +170,13 @@ public class Piece {
             {0, 0, 5},
             {0, 4, 5}
         },
-        {               // Piece G
+        {   // Piece G
             {2, 0, 0},  // Upside down backwards L
             {2, 4, 0},
             {2, 2, 2},
             {2, 6, 2},
-            {2, 0, 5},
-            {2, 4, 5},
+            {2, 0, 4},
+            {2, 4, 4},
             {4, 2, 0},  // Backwards L
             {4, 6, 0},
             {4, 0, 2},
@@ -175,13 +184,13 @@ public class Piece {
             {4, 2, 4},
             {4, 6, 4}
         },
-        {               // Piece H
+        {   // Piece H
             {5, 0, 0},  // Normal L
             {5, 4, 0},
             {5, 2, 2},
             {5, 6, 2},
-            {5, 0, 5},
-            {5, 4, 5},
+            {5, 0, 4},
+            {5, 4, 4},
             {3, 2, 0},  // Upside down L
             {3, 6, 0},
             {3, 0, 2},
@@ -189,7 +198,7 @@ public class Piece {
             {3, 2, 4},
             {3, 6, 4}
         },
-        {               // Piece I
+        {   // Piece I
             {2, 1, 0},  // Upside down backwards L (batch 1)
             {2, 5, 0},
             {2, 3, 2},
@@ -208,7 +217,7 @@ public class Piece {
             {4, 2, 3},
             {4, 6, 3}
         },
-        {               // Piece J
+        {   // Piece J
             {9, 2, 0},  // Upside down J
             {9, 6, 0},
             {9, 0, 2},
@@ -227,7 +236,7 @@ public class Piece {
             {7, 2, 3},
             {7, 6, 3}
         },
-        {               // Piece K
+        {   // Piece K
             {1, 2, 0},  // Normal I
             {1, 6, 0},
             {1, 0, 2},
@@ -237,7 +246,7 @@ public class Piece {
             {0, 5, 3},
             {0, 3, 5},
         },
-        {               // Piece L
+        {   // Piece L
             {5, 1, 1},  // Normal L
             {5, 5, 1},
             {5, 3, 3},
@@ -245,7 +254,7 @@ public class Piece {
             {3, 1, 3},
             {3, 5, 3}
         },
-        {               // Piece M
+        {   // Piece M
             {4, 1, 1},  // Backwards L
             {4, 5, 1},
             {4, 3, 3},
@@ -253,7 +262,7 @@ public class Piece {
             {2, 1, 3},
             {2, 5, 3}
         },
-        {               // Piece N
+        {   // Piece N
             {0, 1, 0},  // Face up I
             {0, 2, 1},
             {0, 3, 2},
@@ -263,7 +272,7 @@ public class Piece {
             {0, 5, 4},
             {0, 2, 5}
         },
-        {               // Piece O
+        {   // Piece O
             {13, 1, 1}, // Upside down backwards J
             {13, 5, 1},
             {13, 3, 3},
@@ -277,10 +286,10 @@ public class Piece {
             {6, 0, 3},
             {6, 4, 3}
         },
-        {               // Piece P
+        {   // Piece P
             {0, 2, 0},  // Face up I
             {0, 0, 2},
-            {0, 4, 0},
+            {0, 4, 2},
             {0, 2, 4},
             {1, 3, 1},  // Normal I
             {1, 7, 1},
@@ -288,10 +297,86 @@ public class Piece {
             {1, 5, 3},
         }
     };
-    public char name;
-    public int number;
-    Piece(char nm, int no) {
-        name = nm;
-        number = no;
+    /****
+     * Factory method to create the collection of 16 Piece objects.
+     * 
+     * @return  Piece[] containing the instantiated pieces
+     *
+     ****/
+    public static Piece[] makePieces() {
+        Piece[] answer = new Piece[16];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = new Piece(i);
+        }
+        return answer;
+    }
+
+    public final char pName;    // The name of the Piece: 'A'..'P'
+    public final int pNum;      // The number of the Piece 0..15
+    private int curPos;         // The current position of the Piece on the board: 
+                                //   -1 => not placed, 0..positions[number].length - 1
+    
+    /****
+     * Constructor for Piece. It's private and meant to be invoked
+     * by the factory class method makePieces.
+     * 
+     * @param no    The number of the piece to be instantiated: 0..15
+     ****/
+    private Piece(int no) {
+        pName = (char)(no + 'A');
+        pNum = no;
+        curPos = -1;
+    }
+
+    /****
+     * getPieceCells()  Return the coordinates on the board of the three cells occupied 
+     *                  by this piece at its current position. Returns null if the piece 
+     *                  is not currently at a place on the board
+     * 
+     * @return  byte[][] The x, y location of each of the three occupied cells for
+     *          the current position.
+     */
+    public byte[][] getPieceCells() {
+        if (curPos <= -1) {
+            return null;
+        }
+        byte[][] answer = new byte[3][2];
+        int cellCount = 0;
+        for (byte dy = 0; dy < 3 && cellCount < 3; dy++) {
+            for (byte dx = 0; dx < 3 && cellCount < 3; dx++) {
+                byte[][] ourShape = shapes[positions[pNum][curPos][0]]; // Get the shape we have for our current position
+                if (ourShape[dy][dx] == 1) {                            // NB: shapes[] is rows and columns, so y then x
+                    answer[cellCount][0] = positions[pNum][curPos][1];  // Doing this and the next line in one
+                    answer[cellCount][0] += dx;                         //   statement makes the syntax checker angry 
+                    answer[cellCount][1] = positions[pNum][curPos][2];
+                    answer[cellCount][1] += dy;
+                    cellCount++;
+                }
+            }
+        }
+        return answer;
+    }
+    
+    /****
+     * Move the Piece to its next logical position.
+     * 
+     * @return  Returns the new position. The starting position is -1, meaning "not on
+     *          the board." Subsequent positions increment by 1. The position after the 
+     *          last is -1 again.
+     */
+    public int toNextPosition() {
+        curPos++;
+        if (curPos >= positions[pNum].length) {
+            curPos = -1;
+        }
+        return curPos;
+    }
+
+    /****
+     * Reset the Piece to the starting position -- i.e., "not on the board."
+     * 
+     */
+    public void resetPosition(){
+        curPos = -1;
     }
 }
