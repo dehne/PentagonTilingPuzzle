@@ -101,7 +101,7 @@ public class Piece {
             {1, 2, 0},  // Normal I at (2, 0)
             {1, 6, 0},  //  " @ (6, 0)
             {1, 4, 2},  //  " @ (4, 2)
-            {0, 3, 1},  // Face Up I at (3, 1)
+            {0, 3, 1},  // Face-up I at (3, 1)
             {0, 1, 3},  //   " @ (1, 3)
             {0, 5, 3},  //   " @ (5, 3)
             {0, 3, 5}   //   " @ (3, 5)
@@ -134,8 +134,6 @@ public class Piece {
             {3, 6, 3},
             {3, 1, 4},
             {3, 5, 4},
-        },
-        {   // Piece D
             {5, 3, 0},  // Normal L
             {5, 2, 1},
             {5, 6, 1},
@@ -145,8 +143,8 @@ public class Piece {
             {5, 4, 3},
             {5, 3, 4},
         },
-        {   // Piece E
-            {8, 1, 1},  // Face up J
+        {   // Piece D
+            {8, 1, 1},  // Face-up J
             {8, 5, 1},
             {8, 3, 3},
             {13, 3, 1}, // Up side down backwards J
@@ -159,18 +157,18 @@ public class Piece {
             {11, 1, 2},
             {11, 5, 2}
         },
-        {   // Piece F
+        {   // Piece E
             {1, 3, 0},  // Normal I
             {1, 7, 0},
             {1, 1, 2},
             {1, 5, 2},
-            {0, 0, 1},  // Face Up I
+            {0, 0, 1},  // Face-up I
             {0, 4, 1},
             {0, 2, 3},
             {0, 0, 5},
             {0, 4, 5}
         },
-        {   // Piece G
+        {   // Piece F
             {2, 0, 0},  // Upside down backwards L
             {2, 4, 0},
             {2, 2, 2},
@@ -184,7 +182,7 @@ public class Piece {
             {4, 2, 4},
             {4, 6, 4}
         },
-        {   // Piece H
+        {   // Piece G
             {5, 0, 0},  // Normal L
             {5, 4, 0},
             {5, 2, 2},
@@ -198,7 +196,7 @@ public class Piece {
             {3, 2, 4},
             {3, 6, 4}
         },
-        {   // Piece I
+        {   // Piece H
             {2, 1, 0},  // Upside down backwards L (batch 1)
             {2, 5, 0},
             {2, 3, 2},
@@ -217,12 +215,12 @@ public class Piece {
             {4, 2, 3},
             {4, 6, 3}
         },
-        {   // Piece J
+        {   // Piece I
             {9, 2, 0},  // Upside down J
             {9, 6, 0},
             {9, 0, 2},
             {9, 4, 2},
-            {10, 3, 0}, // Face up backwrds J
+            {10, 3, 0}, // Face-up backwrds J
             {10, 1, 2},
             {10, 5, 2},
             {10, 3, 4},
@@ -236,17 +234,17 @@ public class Piece {
             {7, 2, 3},
             {7, 6, 3}
         },
-        {   // Piece K
+        {   // Piece J
             {1, 2, 0},  // Normal I
             {1, 6, 0},
             {1, 0, 2},
             {1, 4, 2},
-            {0, 3, 1},  // Face up I
+            {0, 3, 1},  // Face-up I
             {0, 1, 3},
             {0, 5, 3},
             {0, 3, 5},
         },
-        {   // Piece L
+        {   // Piece K
             {5, 1, 1},  // Normal L
             {5, 5, 1},
             {5, 3, 3},
@@ -254,7 +252,7 @@ public class Piece {
             {3, 1, 3},
             {3, 5, 3}
         },
-        {   // Piece M
+        {   // Piece L
             {4, 1, 1},  // Backwards L
             {4, 5, 1},
             {4, 3, 3},
@@ -262,7 +260,7 @@ public class Piece {
             {2, 1, 3},
             {2, 5, 3}
         },
-        {   // Piece N
+        {   // Piece M
             {0, 1, 0},  // Face up I
             {0, 2, 1},
             {0, 3, 2},
@@ -272,11 +270,11 @@ public class Piece {
             {0, 5, 4},
             {0, 2, 5}
         },
-        {   // Piece O
+        {   // Piece N
             {13, 1, 1}, // Upside down backwards J
             {13, 5, 1},
             {13, 3, 3},
-            {8, 3, 1},  // Face up J
+            {8, 3, 1},  // Face-up J
             {8, 1, 3},
             {8, 5, 3},
             {11, 1, 0}, // Backward J
@@ -286,8 +284,8 @@ public class Piece {
             {6, 0, 3},
             {6, 4, 3}
         },
-        {   // Piece P
-            {0, 2, 0},  // Face up I
+        {   // Piece O
+            {0, 2, 0},  // Face-up I
             {0, 0, 2},
             {0, 4, 2},
             {0, 2, 4},
@@ -295,8 +293,112 @@ public class Piece {
             {1, 7, 1},
             {1, 1, 3},
             {1, 5, 3},
+        },
+
+        {   // Piece P
+            {12, 2, 0}, // Face-down backward J
+            {12, 0, 2},
+            {12, 4, 2},
+            {12, 2, 4},
+            {7, 2, 1},  // Normal J
+            {7, 6, 1},
+            {7, 0, 3},
+            {7, 4, 3},
+            {9, 0, 0},  // Upside down J
+            {9, 4, 0},
+            {9, 2, 2},
+            {9, 6, 2},
+            {10, 1, 0}, // Face-up backwards J
+            {10, 5, 0},
+            {10, 3, 2},
+            {10, 1, 4},
+            {10, 5, 4}
+        },
+
+        {   // Piece Q
+            {5, 1, 0},  // Normal L
+            {5, 5, 0},
+            {5, 0, 1},
+            {5, 4, 1},
+            {5, 3, 2},
+            {5, 2, 3},
+            {5, 6, 3},
+            {5, 1, 4},
+            {3, 3, 0},  // Upside down L
+            {3, 2, 1},
+            {3, 6, 1},
+            {3, 1, 2},
+            {3, 5, 2},
+            {3, 0, 3},
+            {3, 4, 3},
+            {3, 3, 4}
+        },
+
+        {   // Piece R
+            {4, 3, 0},  // Backwards L
+            {4, 0, 1},
+            {4, 4, 1},
+            {4, 1, 2},
+            {4, 5, 2},
+            {4, 2, 3},
+            {4, 6, 3},
+            {2, 1, 0},  // Upside down backwards L
+            {2, 5, 0},
+            {2, 2, 1},
+            {2, 6, 1},
+            {2, 3, 2},
+            {2, 0, 3},
+            {2, 4, 3},
+            {2, 1, 4},
+            {2, 5, 4}
+        },
+
+        {   // Piece S
+            {1, 0, 0},  // Normal I
+            {1, 4, 0},
+            {1, 2, 2},
+            {1, 6, 2},
+            {0, 1, 1},  // Face-up I
+            {0, 5, 1},
+            {0, 3, 3},
+            {0, 1, 5},
+            {0, 5, 5}
         }
     };
+
+    // The symbolic names of the Pieces
+    public final static int A = 0;
+    public final static int B = 1;
+    public final static int C = 2;
+    public final static int D = 3;
+    public final static int E = 4;
+    public final static int F = 5;
+    public final static int G = 6;
+    public final static int H = 7;
+    public final static int I = 8;
+    public final static int J = 9;
+    public final static int K = 10;
+    public final static int L = 11;
+    public final static int M = 12;
+    public final static int N = 13;
+    public final static int O = 14;
+    public final static int P = 15;
+    public final static int Q = 16;
+    public final static int R = 17;
+    public final static int S = 18;
+    public final static int N_PIECES = positions.length;    // The number of distinct Pieces
+    public final static int NOT_POSITIONED = -1;            // The location of a Piece when not positioned
+
+    /****
+     * Return the number of positions a given Piece has
+     * 
+     * @param pNo   The number of the Piece being asked about
+     * @return      The number of positions Piece pNo has
+     */
+    public static int positionsFor(int pNo) {
+        return positions[pNo].length;
+    }
+
     /****
      * Factory method to create the collection of 16 Piece objects.
      * 
@@ -304,8 +406,8 @@ public class Piece {
      *
      ****/
     public static Piece[] makePieces() {
-        Piece[] answer = new Piece[16];
-        for (int i = 0; i < answer.length; i++) {
+        Piece[] answer = new Piece[N_PIECES];
+        for (int i = 0; i < N_PIECES; i++) {
             answer[i] = new Piece(i);
         }
         return answer;
@@ -360,8 +462,8 @@ public class Piece {
     /****
      * Move the Piece to its next logical position.
      * 
-     * @return  Returns the new position. The starting position is -1, meaning "not on
-     *          the board." Subsequent positions increment by 1. The position after the 
+     * @return  Returns the new position. The starting state is -1, meaning "not 
+     *          positioned." Subsequent positions increment by 1. The position after the 
      *          last is -1 again.
      */
     public int toNextPosition() {
@@ -373,7 +475,16 @@ public class Piece {
     }
 
     /****
-     * Reset the Piece to the starting position -- i.e., "not on the board."
+     * Get this Piece's current position
+     * 
+     * @return  The current position. -1 ==> not positioned
+     */
+    int getCurPos() {
+        return curPos;
+    }
+
+    /****
+     * Reset the Piece to the starting state -- i.e., "not positioned."
      * 
      */
     public void resetPosition(){
