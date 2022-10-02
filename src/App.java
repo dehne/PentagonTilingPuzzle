@@ -1,5 +1,98 @@
+/****
+ * This little program attempts to solve a particular tiling puzzle. The puzzle's tiles 
+ * are each made from three identical type 8 monohedral pentagons joined edge to edge. 
+ * Type 8 monohedral pentagons are one of fifteem kinds of irregular pentagons that tile 
+ * the plane. (See https://en.wikipedia.org/wiki/Pentagonal_tiling.)
+ * 
+ * The tiling of these pentagons is of the "wallpaper" style, meaning that there is a group 
+ * of adjacent pentagons that taken as a whole will tile the plane purely by translation 
+ * (i.e., by sliding them around appropriately). Overall, the pentagons in the tiling can 
+ * be treated as being arranged in irregular rows and columns. The puzzle consists of a 
+ * region of the tiling that is Board.HEIGHT pentagons high and Board.WIDTH pentagons 
+ * wide. 
+ * 
+ * Finding solutions to this puzzle is not exactly a burning problem, of course, but 
+ * because the shape of of type 8 monohedral pentagons is unusual and because the way 
+ * they tile the plane is odd, and because the set of tiles made from three pentagons 
+ * joined edge to edge tend to look like others in the set even though they're 
+ * different, looking for solutions to a real physical instance of the puzzle looks like 
+ * it should be hard. So I decided to see if there are solutions and to make a physical 
+ * puzzle if there are.
+ * 
+ * I have not found anything about the set of tiles that can be made from three of these 
+ * pentagons, so I developed them by hand. There are 18 of them. I chose a board that is a
+ * region on the tiling of the pentagons that is 8 x 6 pentagons (which is the right size 
+ * for 16 of the three-pentagon tiles) and has a pleasing shape. I then developed this
+ * program to search for all the ways 16 of the 18 tiles can be placed on the board 
+ * (without overlapping one another, of course). There aren't any.
+ * 
+ * But if you enlarge the set of tiles by including a repeat of one of them, there often are 
+ * a few solutions.
+ * 
+ * I've labeled the 18 three-pentagon pieces A, B, C, ... P, Q, R.  For the record, the 
+ * solutons with two copies of the H piece are:
+ * 
+ *   Solution 1  Solution 2
+ *    ********    ********
+ *   *GMMMRHHE*  *FFOOOPGG*
+ *   *GGHHRHLE*  *FKQQPICG*
+ *   *JCHNRLLE*  *JKKQPICC*
+ *   *JCCNQQBB*  *JLLHIAAA*
+ *   *JIIPNQBF*  *JLHHHMMM*
+ *   *IPPAAAFF*  *EEEHHRRR*
+ *    ********    ********
+ * 
+ * Solution 1 is based on the tile subset A B C E F G H H I J L M N P Q R. Solutions 2 uses 
+ * the tile subset A C E F G H H I J K L M O P Q R.
+ * 
+ * =====
+ *
+ *  @file     App.java 
+ * 
+ *  @version  Version 1.0.0, September 2022
+ *
+ *  @author   D. L. Ehnebuske
+ *
+ *  @section  license
+ *
+ *  Software License Agreement (BSD License)
+ *
+ *  Copyright (c) 2022 by D. L. Ehnebuke All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ * 
+ *    1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ *    2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ *    3. Neither the name of the copyright holders nor the
+ *    names of its contributors may be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ''AS IS'' AND ANY
+ *  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 
+****/
 public class App {
-    private static boolean solve(Piece[] pieces) {
+    /****
+     * Find all of the possible solutions to a puzzle based on the set of Pieces pieces
+     * 
+     * @param pieces    The set of pieces to use for the solution(s)
+     * @return          Returns true if at least one solution was found, false if not
+     */
+    private static boolean solveForSet(Piece[] pieces) {
         Board board = new Board();
         int curPiece = 0;
         boolean[] placed = new boolean[pieces.length];
@@ -38,24 +131,26 @@ public class App {
         return solved;
     }
 
-    /***
-     * The "guts" of the piece combinations generator comb() only invoked from there
-     * Many thanks to https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
-     * for the algorithm.
+    /****
+     * Generate all the combinations of Pieces from piece that fit into curComb (i.e., all the combinations of pieces.length 
+     * taken curComb.length at a time), and for each, find all the solutions using the combination of Pieces in cueComb.
      * 
-     * @param pieces    The array containing the Pieces
+     * Many thanks to https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
+     * for publishing the algorithm.
+     * 
+     * @param pieces    The array containing the full set of Pieces
      * @param curComb   The array used as a buffer in which to generate the combinations
-     * @param start     Current starting index in pieces
-     * @param end       Current ending index in pieces
-     * @param index     Current index in curComb
+     * @param start     Current starting index in pieces[] (Set this to 0 initially)
+     * @param end       Current ending index in pieces[] (Set this to pieces.length - 1 initially)
+     * @param index     Current index in curComb[] (Set this to 0 initially)
      */
     private static void combUtil(
         Piece pieces[], Piece curComb[], int start, int end, int index) {
         int m = curComb.length;
         if (index == m) {                       // If curComb is ready,
-            //   Find all the solutions to the puzzle using that combination of pieces
-            if (solve(curComb)) {               //   If we found at least one
-                for (int j = 0; j < m; j++) {   //   Print the combination
+            //   Find all the solutions to the puzzle using curComb combination of pieces
+            if (solveForSet(curComb)) {         //   If we found at least one
+                for (int j = 0; j < m; j++) {   //      Print the curComb combination
                     System.out.print(curComb[j].pName + " ");
                 }
                 System.out.println("");
@@ -76,22 +171,32 @@ public class App {
     }
 
     /****
-     * Piece combination generator. Generate all combinations of 
-     * Pieces pieces taken m at a time and, for each, search for 
-     * all possible solutions.
-     * @param pieces
-     * @param m
+     * Find all the solutions to the puzzle using any combination of Board.CAPACITY 
+     * Pieces from full set of Pieces.
+     * 
+     * @param pNo   The number of the Piece to repeat in the set of Pieces to be used in
+     *              solving the puzzle. -1 ==> Don't include a repeated Piece.
      */
-    private static void comb(Piece[] pieces, int m) {
+    private static void solve(int pNo) {
  
-        Piece curComb[]=new Piece[m];
+        Piece[] pieces = Piece.makePieces(pNo);         // Make the full set of possible pieces
+        Piece curComb[]=new Piece[Board.CAPACITY];      // A buffer to hold the various subsets of pieces
+                                                        //  we'll be using to try to solve the puzzle
  
-        combUtil(pieces, curComb, 0, pieces.length-1, 0);
+        combUtil(pieces, curComb, 0, pieces.length - 1, 0);
+                                                        // Generate the subsets of the full set of pieces
+                                                        //  and for each, find all possible solutions (if any)
     }
 
+    /****
+     * The driver program
+     * @param args          Not using these
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
-        Piece[] pieces = Piece.makePieces();
-
-        comb(pieces, 16);
+        for (int pNo = Piece.B; pNo < Piece.N_PIECES; pNo++) {
+            System.out.printf("\nAdd an extra piece %c.\n", (char)pNo + 'A');
+            solve(pNo);
+        }
     }
 }
