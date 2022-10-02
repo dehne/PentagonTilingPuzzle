@@ -1,8 +1,59 @@
+/****
+ * 
+ * This file is a part of the Pentagon Tiling Puzzle. See App.java for details
+ * 
+ * This file implements the Piece class
+ * 
+ * =====
+ *
+ *  @file     Board.java 
+ * 
+ *  @version  Version 1.0.0, September 2022
+ *
+ *  @author   D. L. Ehnebuske
+ *
+ *  @section  license
+ *
+ *  Software License Agreement (BSD License)
+ *
+ *  Copyright (c) 2022 by D. L. Ehnebuke All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ * 
+ *    1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 
+ *    2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ *    3. Neither the name of the copyright holders nor the
+ *    names of its contributors may be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ''AS IS'' AND ANY
+ *  EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * 
+****/
 public class Piece {
-    // The shapes and orientations of those shapes the pieces can have possibly have.
-    // A shape is a 3 x 3 array telling whether one of the parts of a piece occupy a
-    // cell on the board. 1 => cell occupied by a piece with this shape; 0 => cell not
-    // occupied.
+    /****
+     * 
+     * The shapes and orientations of those shapes the pieces can have possibly have. 
+     * A shape is a 3 x 3 array telling whether one of the parts of a piece occupy a 
+     * cell on the board. 1 => cell occupied by a piece with this shape; 0 => cell not 
+     * occupied.
+     * 
+     ****/
+
     // column selector --------------------.
     // row selector --------------------.  |
     // shape selector ---------------.  |  |
@@ -85,9 +136,12 @@ public class Piece {
         }
     };
 
-    // The possible positions of all the pieces. These were determined 
-    // by inspecting where each of the pieces could possibly fit on the
-    // board.
+    /****
+     * The possible positions of all the pieces. These were determined 
+     * by inspecting where each of the pieces could possibly fit on the
+     * board. 
+     ****/
+
     // position component selector -----------.     0 => shape, 1 => x, 2 => y
     // position selector ------------------.  |     0..number of possible positions - 1
     // piece selector ------------------.  |  |     0 => Piece A, 1 => Piece B, ... 15 => Piece P
@@ -100,6 +154,7 @@ public class Piece {
 //           |  |  |            
             {1, 2, 0},  // Normal I at (2, 0)
             {1, 6, 0},  //  " @ (6, 0)
+            {1, 0, 2},  //  " @ (0, 2)
             {1, 4, 2},  //  " @ (4, 2)
             {0, 3, 1},  // Face-up I at (3, 1)
             {0, 1, 3},  //   " @ (1, 3)
@@ -235,16 +290,6 @@ public class Piece {
             {7, 6, 3}
         },
         {   // Piece J
-            {1, 2, 0},  // Normal I
-            {1, 6, 0},
-            {1, 0, 2},
-            {1, 4, 2},
-            {0, 3, 1},  // Face-up I
-            {0, 1, 3},
-            {0, 5, 3},
-            {0, 3, 5},
-        },
-        {   // Piece K
             {5, 1, 1},  // Normal L
             {5, 5, 1},
             {5, 3, 3},
@@ -252,7 +297,7 @@ public class Piece {
             {3, 1, 3},
             {3, 5, 3}
         },
-        {   // Piece L
+        {   // Piece K
             {4, 1, 1},  // Backwards L
             {4, 5, 1},
             {4, 3, 3},
@@ -260,7 +305,7 @@ public class Piece {
             {2, 1, 3},
             {2, 5, 3}
         },
-        {   // Piece M
+        {   // Piece L
             {0, 1, 0},  // Face up I
             {0, 2, 1},
             {0, 3, 2},
@@ -270,7 +315,7 @@ public class Piece {
             {0, 5, 4},
             {0, 2, 5}
         },
-        {   // Piece N
+        {   // Piece M
             {13, 1, 1}, // Upside down backwards J
             {13, 5, 1},
             {13, 3, 3},
@@ -284,7 +329,7 @@ public class Piece {
             {6, 0, 3},
             {6, 4, 3}
         },
-        {   // Piece O
+        {   // Piece N
             {0, 2, 0},  // Face-up I
             {0, 0, 2},
             {0, 4, 2},
@@ -295,7 +340,7 @@ public class Piece {
             {1, 5, 3},
         },
 
-        {   // Piece P
+        {   // Piece O
             {12, 2, 0}, // Face-down backward J
             {12, 0, 2},
             {12, 4, 2},
@@ -315,7 +360,7 @@ public class Piece {
             {10, 5, 4}
         },
 
-        {   // Piece Q
+        {   // Piece P
             {5, 1, 0},  // Normal L
             {5, 5, 0},
             {5, 0, 1},
@@ -333,27 +378,7 @@ public class Piece {
             {3, 4, 3},
             {3, 3, 4}
         },
-
-        {   // Piece R
-            {4, 3, 0},  // Backwards L
-            {4, 0, 1},
-            {4, 4, 1},
-            {4, 1, 2},
-            {4, 5, 2},
-            {4, 2, 3},
-            {4, 6, 3},
-            {2, 1, 0},  // Upside down backwards L
-            {2, 5, 0},
-            {2, 2, 1},
-            {2, 6, 1},
-            {2, 3, 2},
-            {2, 0, 3},
-            {2, 4, 3},
-            {2, 1, 4},
-            {2, 5, 4}
-        },
-
-        {   // Piece S
+        {   // Piece Q
             {1, 0, 0},  // Normal I
             {1, 4, 0},
             {1, 2, 2},
@@ -366,7 +391,10 @@ public class Piece {
         }
     };
 
-    // The symbolic names of the Pieces
+    /****
+     * The symbolic names of the Pieces
+     ****/
+    public final static int NONE = -1;  // Indication to makePieces that no repeated Piece is wanted
     public final static int A = 0;
     public final static int B = 1;
     public final static int C = 2;
@@ -385,16 +413,23 @@ public class Piece {
     public final static int P = 15;
     public final static int Q = 16;
     public final static int R = 17;
-    public final static int S = 18;
-    public final static int N_PIECES = positions.length;    // The number of distinct Pieces
-    public final static int NOT_POSITIONED = -1;            // The location of a Piece when not positioned
+
+    /****
+     * The number of distinct Pieces
+     ****/
+    public final static int N_PIECES = positions.length;
+
+    /****
+     * The location of a Piece when not positioned
+     ****/
+    public final static int NOT_POSITIONED = -1;
 
     /****
      * Return the number of positions a given Piece has
      * 
      * @param pNo   The number of the Piece being asked about
      * @return      The number of positions Piece pNo has
-     */
+     ****/
     public static int positionsFor(int pNo) {
         return positions[pNo].length;
     }
@@ -402,13 +437,18 @@ public class Piece {
     /****
      * Factory method to create the collection of 16 Piece objects.
      * 
-     * @return  Piece[] containing the instantiated pieces
-     *
+     * 
+     * @param pNo   The number of the Piece to repeat in the set of Pieces to be used in
+     *              solving the puzzle. -1 ==> Don't include a repeated Piece.
+     * @return      Piece[] containing the instantiated pieces
      ****/
-    public static Piece[] makePieces() {
-        Piece[] answer = new Piece[N_PIECES];
+    public static Piece[] makePieces(int pNo) {
+        Piece[] answer = new Piece[pNo == -1 ? N_PIECES : N_PIECES + 1];
         for (int i = 0; i < N_PIECES; i++) {
             answer[i] = new Piece(i);
+        }
+        if (pNo != -1) {
+            answer[N_PIECES] = new Piece(pNo);
         }
         return answer;
     }
@@ -437,7 +477,7 @@ public class Piece {
      * 
      * @return  byte[][] The x, y location of each of the three occupied cells for
      *          the current position.
-     */
+     ****/
     public byte[][] getPieceCells() {
         if (curPos <= -1) {
             return null;
@@ -465,7 +505,7 @@ public class Piece {
      * @return  Returns the new position. The starting state is -1, meaning "not 
      *          positioned." Subsequent positions increment by 1. The position after the 
      *          last is -1 again.
-     */
+     ****/
     public int toNextPosition() {
         curPos++;
         if (curPos >= positions[pNum].length) {
@@ -478,7 +518,7 @@ public class Piece {
      * Get this Piece's current position
      * 
      * @return  The current position. -1 ==> not positioned
-     */
+     ****/
     int getCurPos() {
         return curPos;
     }
@@ -486,7 +526,7 @@ public class Piece {
     /****
      * Reset the Piece to the starting state -- i.e., "not positioned."
      * 
-     */
+     ****/
     public void resetPosition(){
         curPos = -1;
     }
