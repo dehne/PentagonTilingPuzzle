@@ -1,55 +1,15 @@
 /****
- * This little program attempts to solve a particular tiling puzzle. The puzzle's tiles 
- * are each made from three identical type 8 monohedral pentagons joined edge to edge. 
- * Type 8 monohedral pentagons are one of fifteem kinds of irregular pentagons that tile 
- * the plane. (See https://en.wikipedia.org/wiki/Pentagonal_tiling.)
  * 
- * The tiling of these pentagons is of the "wallpaper" style, meaning that there is a group 
- * of adjacent pentagons that taken as a whole will tile the plane purely by translation 
- * (i.e., by sliding them around appropriately). Overall, the pentagons in the tiling can 
- * be treated as being arranged in irregular rows and columns. The puzzle consists of a 
- * region of the tiling that is Board.HEIGHT pentagons high and Board.WIDTH pentagons 
- * wide. 
+ * This file is a part of the Pentagon Tiling Puzzle. See README.md for details.
  * 
- * Finding solutions to this puzzle is not exactly a burning problem, of course, but 
- * because the shape of of type 8 monohedral pentagons is unusual and because the way 
- * they tile the plane is odd, and because the set of tiles made from three pentagons 
- * joined edge to edge tend to look like others in the set even though they're 
- * different, looking for solutions to a real physical instance of the puzzle looks like 
- * it should be hard. So I decided to see if there are solutions and to make a physical 
- * puzzle if there are.
- * 
- * I have not found anything about the set of tiles that can be made from three of these 
- * pentagons, so I developed them by hand. There are 18 of them. I chose a board that is a
- * region on the tiling of the pentagons that is 8 x 6 pentagons (which is the right size 
- * for 16 of the three-pentagon tiles) and has a pleasing shape. I then developed this
- * program to search for all the ways 16 of the 18 tiles can be placed on the board 
- * (without overlapping one another, of course). There aren't any.
- * 
- * But if you enlarge the set of tiles by including a repeat of one of them, there often are 
- * a few solutions.
- * 
- * I've labeled the 18 three-pentagon pieces A, B, C, ... P, Q, R.  For the record, the 
- * solutons with two copies of the H piece are:
- * 
- *   Solution 1  Solution 2
- *    ********    ********
- *   *GMMMRHHE*  *FFOOOPGG*
- *   *GGHHRHLE*  *FKQQPICG*
- *   *JCHNRLLE*  *JKKQPICC*
- *   *JCCNQQBB*  *JLLHIAAA*
- *   *JIIPNQBF*  *JLHHHMMM*
- *   *IPPAAAFF*  *EEEHHRRR*
- *    ********    ********
- * 
- * Solution 1 is based on the tile subset A B C E F G H H I J L M N P Q R. Solutions 2 uses 
- * the tile subset A C E F G H H I J K L M O P Q R.
+ * This file implements the driver program that actually instantiates the Board and Pieces and 
+ * uses them to solve the puzzle.
  * 
  * =====
  *
  *  @file     App.java 
  * 
- *  @version  Version 1.0.0, September 2022
+ *  @version  Version 1.0.0, October 2022
  *
  *  @author   D. L. Ehnebuske
  *
@@ -99,7 +59,6 @@ public class App {
         int nPlaced = 0;
         boolean running = true;
         boolean solved = false;
-
         while (running) {
             if (placed[curPiece]) {                         // If the current piece is placed on the board, remove it
                 board.removePiece(pieces[curPiece]);
@@ -112,7 +71,7 @@ public class App {
                     placed[curPiece] = true;
                     nPlaced++;
                     if (nPlaced >= pieces.length) {         //     Print the state of the board if enough pieces placed
-                        System.out.printf("\nPlaced: %d\n", nPlaced);
+                        System.out.print("\n");
                         System.out.println(board);
                         solved = true;                      //      And note there was a solution
                     }
@@ -194,7 +153,7 @@ public class App {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        for (int pNo = Piece.B; pNo < Piece.N_PIECES; pNo++) {
+        for (int pNo = Piece.A; pNo < Piece.N_PIECES; pNo++) {
             System.out.printf("\nAdd an extra piece %c.\n", (char)pNo + 'A');
             solve(pNo);
         }

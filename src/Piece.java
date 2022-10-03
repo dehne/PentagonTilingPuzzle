@@ -1,6 +1,6 @@
 /****
  * 
- * This file is a part of the Pentagon Tiling Puzzle. See App.java for details
+ * This file is a part of the Pentagon Tiling Puzzle. See README.md for details.
  * 
  * This file implements the Piece class
  * 
@@ -8,7 +8,7 @@
  *
  *  @file     Board.java 
  * 
- *  @version  Version 1.0.0, September 2022
+ *  @version  Version 1.0.0, October 2022
  *
  *  @author   D. L. Ehnebuske
  *
@@ -412,7 +412,6 @@ public class Piece {
     public final static int O = 14;
     public final static int P = 15;
     public final static int Q = 16;
-    public final static int R = 17;
 
     /****
      * The number of distinct Pieces

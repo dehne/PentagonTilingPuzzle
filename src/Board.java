@@ -1,6 +1,6 @@
 /****
  * 
- * This file is a part of the Pentagon Tiling Puzzle. See App.java for details
+ * This file is a part of the Pentagon Tiling Puzzle. See README.md for details.
  * 
  * This file implements the Board class
  * 
@@ -8,7 +8,7 @@
  *
  *  @file     Board.java 
  * 
- *  @version  Version 1.0.0, September 2022
+ *  @version  Version 1.0.0, October 2022
  *
  *  @author   D. L. Ehnebuske
  *
