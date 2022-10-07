@@ -131,14 +131,15 @@ public class App {
 
     /****
      * Find all the solutions to the puzzle using any combination of Board.CAPACITY 
-     * Pieces from full set of Pieces.
+     * Pieces from full set of Pieces plus extras (which will be repeats, of course) as 
+     * requested.
      * 
-     * @param pNo   The number of the Piece to repeat in the set of Pieces to be used in
-     *              solving the puzzle. -1 ==> Don't include a repeated Piece.
+     * @param extras    The numbers of the Pieces to repeat in the set of Pieces to be used in
+     *                  solving the puzzle. -1 ==> Don't include a repeated Piece.
      */
-    private static void solve(int pNo) {
+    private static void solve(int[] extras) {
  
-        Piece[] pieces = Piece.makePieces(pNo);         // Make the full set of possible pieces
+        Piece[] pieces = Piece.makePieces(extras);      // Make the full set of possible pieces
         Piece curComb[]=new Piece[Board.CAPACITY];      // A buffer to hold the various subsets of pieces
                                                         //  we'll be using to try to solve the puzzle
  
@@ -153,9 +154,17 @@ public class App {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        for (int pNo = Piece.A; pNo < Piece.N_PIECES; pNo++) {
-            System.out.printf("\nAdd an extra piece %c.\n", (char)pNo + 'A');
-            solve(pNo);
+        int[] extras = new int[2];
+        for (int i = Piece.A; i < Piece.N_PIECES; i++) {
+            extras[0] = i;
+            for (int j = Piece.A; j <= i; j ++) {
+                extras[1] = j;
+                System.out.printf("\nAdd %d extra pieces ", extras.length);
+                for (int k = 0; k < extras.length; k++) {
+                    System.out.printf("%c%c ", (char)(extras[k] + 'A'), k == extras.length - 1 ? '.' : ',');
+                }
+                solve(extras);
+            }
         }
     }
 }
