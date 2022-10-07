@@ -1,0 +1,201 @@
+Add 2 extra pieces A, A.
+Add 2 extra pieces B, A.
+Add 2 extra pieces B, B.
+Add 2 extra pieces C, A.
+
+    01
+ ********
+*FFNNNCCE*
+*FDLLLJCE*
+*ACDDBJJE*
+*ACCBBAAA*
+*AIIOHPGG*
+*IOOHHPPG*
+ ********
+ ABCDEFGH
+ IJLNOPCA 
+
+    02
+ ********
+*FFNNNHHE*
+*FJLLLHKE*
+*AJJCCKKE*
+*AODDCAAA*
+*AOBCDPGG*
+*OBBCCPPG*
+ ********
+ ABCDEFGH
+ JKLNOPCA
+
+
+Add 2 extra pieces C, B.
+Add 2 extra pieces C, C.
+Add 2 extra pieces D, A.
+Add 2 extra pieces D, B.
+Add 2 extra pieces D, C.
+Add 2 extra pieces D, D.
+Add 2 extra pieces E, A.
+
+    03
+ ********
+*FFNNNCCE*
+*FJMMDDCE*
+*AJJIMODE*
+*AIIOOAAA*
+*ALLLHPGG*
+*EEEHHPPG*
+ ********
+ ACDEFGHI
+ JLMNOPEA 
+
+
+Add 2 extra pieces E, B.
+Add 2 extra pieces E, C.
+Add 2 extra pieces E, D.
+Add 2 extra pieces E, E.
+Add 2 extra pieces F, A.
+Add 2 extra pieces F, B.
+Add 2 extra pieces F, C.
+
+    04
+ ********
+*FFADGLLL*
+*FHADGGPP*
+*HHAMDOOP*
+*CJJMONBB*
+*CCJCMNBF*
+*EEECCNFF*
+ ********
+ ABCDEFGH
+ JLMNOPFC 
+
+    05
+ ********
+*FFBDGLLL*
+*FBBDGGPP*
+*NNNMDOOP*
+*CJJMOAAA*
+*CCJCMHHF*
+*EEECCHFF*
+ ********
+ ABCDEFGH
+ JLMNOPFC 
+
+
+Add 2 extra pieces F, D.
+Add 2 extra pieces F, E.
+Add 2 extra pieces F, F.
+Add 2 extra pieces G, A.
+Add 2 extra pieces G, B.
+Add 2 extra pieces G, C.
+Add 2 extra pieces G, D.
+Add 2 extra pieces G, E.
+Add 2 extra pieces G, F.
+
+    06
+ ********
+*FFADGLLL*
+*FHADGGPP*
+*HHAIDOOP*
+*CIIMONBB*
+*CCGGMNBF*
+*EEEGMNFF*
+ ********
+ ABCDEFGH
+ ILMNOPGF 
+
+    07
+ ********
+*GCCBBIIF*
+*GGCBIDFF*
+*NNNLLLDD*
+*MMEEEAAA*
+*FFMOHPGG*
+*FOOHHPPG*
+ ********
+ ABCDEFGH
+ ILMNOPGF 
+
+    08
+ ********
+*FFBDGLLL*
+*FBBDGGPP*
+*NNNIDOOP*
+*CIIMOAAA*
+*CCGGMHHF*
+*EEEGMHFF*
+ ********
+ ABCDEFGH
+ ILMNOPGF 
+
+
+Add 2 extra pieces G, G.
+Add 2 extra pieces H, A.
+
+    09
+ ********
+*FFNNNHHE*
+*FDLLLHKE*
+*ACDDBKKE*
+*ACCBBAAA*
+*AIIOHPGG*
+*IOOHHPPG*
+ ********
+ ABCDEFGH
+ IKLNOPHA 
+
+
+Add 2 extra pieces H, B.
+Add 2 extra pieces H, C.
+
+    10
+ ********
+*GCCBBLLL*
+*GGCBDDPP*
+*NNNIIODP*
+*CMIOOAAA*
+*CCMMHHHF*
+*EEEHHHFF*
+ ********
+ ABCDEFGH
+ ILMNOPHC 
+
+
+Add 2 extra pieces H, D.
+Add 2 extra pieces H, E.
+Add 2 extra pieces H, F.
+Add 2 extra pieces H, G.
+Add 2 extra pieces H, H.
+Add 2 extra pieces I, A.
+Add 2 extra pieces I, B.
+Add 2 extra pieces I, C.
+Add 2 extra pieces I, D.
+Add 2 extra pieces I, E.
+Add 2 extra pieces I, F.
+Add 2 extra pieces I, G.
+Add 2 extra pieces I, H.
+Add 2 extra pieces I, I.
+Add 2 extra pieces J, A.
+Add 2 extra pieces J, B.
+Add 2 extra pieces J, C.
+Add 2 extra pieces J, D.
+Add 2 extra pieces J, E.
+Add 2 extra pieces J, F.
+Add 2 extra pieces J, G.
+Add 2 extra pieces J, H.
+Add 2 extra pieces J, I.
+Add 2 extra pieces J, J.
+Add 2 extra pieces K, A.
+Add 2 extra pieces K, B.
+Add 2 extra pieces K, C.
+Add 2 extra pieces K, D.
+Add 2 extra pieces K, E.
+Add 2 extra pieces K, F.
+Add 2 extra pieces K, G.
+Add 2 extra pieces K, H.
+Add 2 extra pieces K, I.
+Add 2 extra pieces K, J.
+Add 2 extra pieces K, K.
+Add 2 extra pieces L, A.
+Add 2 extra pieces L, B.
+Add 2 extra pieces L, C.

@@ -11,6 +11,20 @@ duplicating and sliding the group around appropriately).
 
 ![Drawing of the base tiling](doc/BaseTiling.png)
 
+I have not found anything about the set of pieces that can be made from three of these 
+pentagons, so I investigated the set by hand. There are 146 of them. Most, however, don't appear 
+in the underlying pentagonal tiling. Of the 146, only 16 do. I've labeled the 16 relevant 
+three-pentagon pieces A, B, C, ... O, P. 
+
+![Drawing of the 16 pieces](doc/ThePieces.png)
+
+Finding solutions to puzzles made from the 3-pentagon pieces is not exactly a burning problem, 
+of course, but because the shape of of type 8 monohedral pentagons is unusual and because the 
+way they tile the plane is odd, and because many pieces tend to look like others in the set 
+even though they're different, looking for solutions to a real physical instance looks like it 
+should be hard. So I decided to see if there are solutions and, if there are, to make a 
+physical puzzle.
+
 The way they are arranged lets the pentagons in the tiling be treated as being arranged in 
 irregular rows and columns. 
 
@@ -21,30 +35,19 @@ easier to deal with in a program. Applying that same mapping to the 3-pentagon p
 in some of the common edges degenerating into points and adds constraints on where the 
 transformed pieces can be placed on the square tiling. None of this is is too complicated.
 
-Finding solutions to puzzles made from the 3-pentagon pieces is not exactly a burning problem, 
-of course, but because the shape of of type 8 monohedral pentagons is unusual and because the 
-way they tile the plane is odd, and because many pieces tend to look like others in the set 
-even though they're different, looking for solutions to a real physical instance looks like it 
-should be hard. So I decided to see if there are solutions and, if there are, to make a 
-physical puzzle.
+I chose a region on the tiling of the pentagons that is 8 x 6 pentagons (which is the right size 
+for 16 of the three-pentagon tiles) and has a pleasing shape as the "board" on which to build the 
+puzzle. (it's the one shown in the second tiling example, above.) I then developed this program 
+to search for all the ways the tiles can be placed on the board (without overlapping one another, 
+of course). 
 
-I have not found anything about the set of tiles that can be made from three of these 
-pentagons, so I developed the set by hand. There are 17 of them. I've labeled the 17 three-
-pentagon pieces A, B, C, ... O, P, Q. 
+There aren't any. There also aren't any if you repeat one the tiles, giving you a set of 17 from 
+which to select 16.
 
-![Drawing of the 17 pieces](doc/ThePieces.png)
+But it turns out that if you enlarge the set of tiles by including a duplicate of one of 
+them, there are solutions. Thirteen of them.
 
-For a board, I chose a region on the tiling of the pentagons that is 8 x 6 pentagons (which 
-is the right size for 16 of the three-pentagon tiles) and has a pleasing shape. (it's the one 
-shown in the second tiling example, above.) I then developed this program to search for all the 
-ways 16 of the 17 tiles can be placed on the board (without overlapping one another, of course). 
-
-There aren't any.
-
-But if it turns out that if you enlarge the set of tiles by including a duplicate of one of 
-them, there are a 13 solutions.
-
-For the record, the solutions are:
+For the record, here they are:
 
         01          02          03          04          05          06          07      
      ********    ********    ********    ********    ********    ********    ********   
@@ -73,7 +76,7 @@ For the record, the solutions are:
      ABDEFGHI    ABDEFGHI    ACDEFGHI    ABCDEFHI    ABCDEFGH    ABCDEFHI
      JKLNOPQF    JKLNOPQF    JKLNOPQG    JLMNOPQI    ILMNOPQO    KLMNOPQQ
    
-The letters below each solution are the names of the pieces that are used in the solution. The 
+The letters below each solution are the names of the pieces that are used in that solution. The 
 last letter tells which of the pieces was repeated. And here's what solution 01 looks like using 
 correctly shaped pieces:
 

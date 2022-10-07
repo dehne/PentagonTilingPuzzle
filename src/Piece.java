@@ -182,6 +182,7 @@ public class Piece {
         },
         {   // Piece C
             {3, 1, 0},  // Upside down L
+            {3, 5, 0},
             {3, 0, 1},
             {3, 4, 1},
             {3, 3, 2},
@@ -307,6 +308,7 @@ public class Piece {
         },
         {   // Piece L
             {0, 1, 0},  // Face up I
+            {0, 5, 0},
             {0, 2, 1},
             {0, 3, 2},
             {0, 0, 3},
@@ -369,6 +371,7 @@ public class Piece {
             {5, 2, 3},
             {5, 6, 3},
             {5, 1, 4},
+            {5, 5, 4},
             {3, 3, 0},  // Upside down L
             {3, 2, 1},
             {3, 6, 1},
@@ -377,17 +380,6 @@ public class Piece {
             {3, 0, 3},
             {3, 4, 3},
             {3, 3, 4}
-        },
-        {   // Piece Q
-            {1, 0, 0},  // Normal I
-            {1, 4, 0},
-            {1, 2, 2},
-            {1, 6, 2},
-            {0, 1, 1},  // Face-up I
-            {0, 5, 1},
-            {0, 3, 3},
-            {0, 1, 5},
-            {0, 5, 5}
         }
     };
 
@@ -411,7 +403,6 @@ public class Piece {
     public final static int N = 13;
     public final static int O = 14;
     public final static int P = 15;
-    public final static int Q = 16;
 
     /****
      * The number of distinct Pieces
@@ -437,17 +428,17 @@ public class Piece {
      * Factory method to create the collection of 16 Piece objects.
      * 
      * 
-     * @param pNo   The number of the Piece to repeat in the set of Pieces to be used in
-     *              solving the puzzle. -1 ==> Don't include a repeated Piece.
-     * @return      Piece[] containing the instantiated pieces
+     * @param extras    The numbers of the Piece(s) to repeat in the set of Pieces to be used in
+     *                  solving the puzzle.
+     * @return          Piece[] containing the instantiated pieces
      ****/
-    public static Piece[] makePieces(int pNo) {
-        Piece[] answer = new Piece[pNo == -1 ? N_PIECES : N_PIECES + 1];
+    public static Piece[] makePieces(int[] extras) {
+        Piece[] answer = new Piece[N_PIECES + extras.length];
         for (int i = 0; i < N_PIECES; i++) {
             answer[i] = new Piece(i);
         }
-        if (pNo != -1) {
-            answer[N_PIECES] = new Piece(pNo);
+        for (int i = 0; i < extras.length; i++) {
+            answer[N_PIECES + i] = new Piece(extras[i]);
         }
         return answer;
     }
