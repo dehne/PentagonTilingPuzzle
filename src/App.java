@@ -49,7 +49,7 @@ public class App {
     /****
      * Find all of the possible solutions to a puzzle based on the set of Pieces pieces
      * 
-     * @param pieces    The set of pieces to use for the solution(s)
+     * @param pieces    The set of 16 pieces to use for the solution(s)
      * @return          Returns true if at least one solution was found, false if not
      */
     private static boolean solveForSet(Piece[] pieces) {

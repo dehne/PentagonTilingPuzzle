@@ -456,13 +456,16 @@ public class Piece {
      * 
      * 
      * @param extras    The numbers of the Piece(s) to repeat in the set of Pieces to be used in
-     *                  solving the puzzle.
+     *                  solving the puzzle. A null value means no extra Pieces.
      * @return          Piece[] containing the instantiated pieces
      ****/
     public static Piece[] makePieces(int[] extras) {
-        Piece[] answer = new Piece[N_PIECES + extras.length];
+        Piece[] answer = new Piece[N_PIECES + (extras == null ? 0 : extras.length)];
         for (int i = 0; i < N_PIECES; i++) {
             answer[i] = new Piece(i);
+        }
+        if (extras == null) {
+            return answer;
         }
         for (int i = 0; i < extras.length; i++) {
             answer[N_PIECES + i] = new Piece(extras[i]);
