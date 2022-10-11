@@ -154,17 +154,11 @@ public class App {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        int[] extras = new int[2];
+        int[] extras = new int[1];
         for (int i = Piece.A; i < Piece.N_PIECES; i++) {
             extras[0] = i;
-            for (int j = Piece.A; j <= i; j ++) {
-                extras[1] = j;
-                System.out.printf("\nAdd %d extra pieces ", extras.length);
-                for (int k = 0; k < extras.length; k++) {
-                    System.out.printf("%c%c ", (char)(extras[k] + 'A'), k == extras.length - 1 ? '.' : ',');
-                }
-                solve(extras);
-            }
+            System.out.printf("\nAdd extra piece %c.\n", (char)(i + 'A'));
+            solve(extras);
         }
     }
 }

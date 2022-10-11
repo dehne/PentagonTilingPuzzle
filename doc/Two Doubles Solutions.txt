@@ -1,371 +1,640 @@
-Add 2 extra pieces A, A.
-Add 2 extra pieces B, A.
-Add 2 extra pieces B, B.
-Add 2 extra pieces C, A.
+Add extra piece A.
 
     01
  ********
-*FFNNNCCE*
-*FDLLLJCE*
-*ACDDBJJE*
-*ACCBBAAA*
-*AIIOHPGG*
-*IOOHHPPG*
+*AAADGCCE*
+*BBKDGGCE*
+*BKKIDOOE*
+*LIIMOJJA*
+*LHHFMPJA*
+*LHFFMPPA*
  ********
  ABCDEFGH
- IJLNOPCA 
+ IJKLMOPA 
 
     02
  ********
-*FFNNNHHE*
-*FJLLLHKE*
-*AJJCCKKE*
-*AODDCAAA*
-*AOBCDPGG*
-*OBBCCPPG*
+*AAAOOHHE*
+*DDOJJHKE*
+*ACDLJKKE*
+*ACCLPPBB*
+*AIILGPBF*
+*INNNGGFF*
  ********
  ABCDEFGH
- JKLNOPCA
-
-
-Add 2 extra pieces C, B.
-Add 2 extra pieces C, C.
-Add 2 extra pieces D, A.
-Add 2 extra pieces D, B.
-Add 2 extra pieces D, C.
-Add 2 extra pieces D, D.
-Add 2 extra pieces E, A.
+ IJKLNOPA 
 
     03
  ********
-*FFNNNCCE*
-*FJMMDDCE*
-*AJJIMODE*
-*AIIOOAAA*
-*ALLLHPGG*
-*EEEHHPPG*
+*AAAOOCCE*
+*PDOJJICE*
+*PPDDJIGE*
+*LKKAIMGG*
+*LKBAFFMM*
+*LBBAFNNN*
  ********
- ACDEFGHI
- JLMNOPEA 
-
-
-Add 2 extra pieces E, B.
-Add 2 extra pieces E, C.
-Add 2 extra pieces E, D.
-Add 2 extra pieces E, E.
-Add 2 extra pieces F, A.
-Add 2 extra pieces F, B.
-Add 2 extra pieces F, C.
+ ABCDEFGI
+ JKLMNOPA 
 
     04
  ********
-*FFADGLLL*
-*FHADGGPP*
-*HHAMDOOP*
-*CJJMONBB*
-*CCJCMNBF*
-*EEECCNFF*
+*AAAFAAAE*
+*DDFFBBKE*
+*GGDOBKKE*
+*LGOJMMCC*
+*LPOJJIMC*
+*LPPIINNN*
  ********
- ABCDEFGH
- JLMNOPFC 
+ ABCDEFGI
+ JKLMNOPA 
 
     05
  ********
-*FFBDGLLL*
-*FBBDGGPP*
-*NNNMDOOP*
-*CJJMOAAA*
-*CCJCMHHF*
-*EEECCHFF*
+*FFNNNHHI*
+*FJLLLHIO*
+*AJJCCDIO*
+*AKKMCDOA*
+*AKGGMPDA*
+*EEEGMPPA*
  ********
- ABCDEFGH
- JLMNOPFC 
+ ACDEFGHI
+ JKLMNOPA 
 
-
-Add 2 extra pieces F, D.
-Add 2 extra pieces F, E.
-Add 2 extra pieces F, F.
-Add 2 extra pieces G, A.
-Add 2 extra pieces G, B.
-Add 2 extra pieces G, C.
-Add 2 extra pieces G, D.
-Add 2 extra pieces G, E.
-Add 2 extra pieces G, F.
+Add extra piece B.
 
     06
  ********
-*FFADGLLL*
-*FHADGGPP*
-*HHAIDOOP*
-*CIIMONBB*
-*CCGGMNBF*
-*EEEGMNFF*
+*NCCBBLLL*
+*NDCBBBPP*
+*NIDDBOOP*
+*IKKMOAAA*
+*IKGGMHHF*
+*EEEGMHFF*
  ********
  ABCDEFGH
- ILMNOPGF 
+ IKLMNOPB 
 
     07
  ********
-*GCCBBIIF*
-*GGCBIDFF*
-*NNNLLLDD*
+*NCCBBLLL*
+*NDCBBBHH*
+*NIDDBFHO*
+*IKKMFFOA*
+*IKGGMPOA*
+*EEEGMPPA*
+ ********
+ ABCDEFGH
+ IKLMNOPB 
+
+    08
+ ********
+*NCCDFFBE*
+*NJCDFBBE*
+*NJJIDOOE*
+*LIIMOKKA*
+*LPGGMKBA*
+*LPPGMBBA*
+ ********
+ ABCDEFGI
+ JKLMNOPB 
+
+Add extra piece C.
+
+    09
+ ********
+*NCCDGCCE*
+*NJCDGGCE*
+*NJJIDOOE*
+*LIIMOKKA*
+*LHHFMKBA*
+*LHFFMBBA*
+ ********
+ ABCDEFGH
+ IJKLMNOC 
+
+    10
+ ********
+*GCCPPCCE*
+*GGCDPJCE*
+*NNNIDJJE*
+*LIIMDKKA*
+*LHHFMKBA*
+*LHFFMBBA*
+ ********
+ ABCDEFGH
+ IJKLMNPC 
+
+    11
+ ********
+*NHHDFFBE*
+*NHKDFBBE*
+*NKKMDOOE*
+*LLLMOJJA*
+*GCCCMPJA*
+*GGCCCPPA*
+ ********
+ ABCDEFGH
+ JKLMNOPC 
+
+    12
+ ********
+*NHHDGCCE*
+*NHKDGGCE*
+*NKKMDOOE*
+*LLLMOJJA*
+*FFBCMPJA*
+*FBBCCPPA*
+ ********
+ ABCDEFGH
+ JKLMNOPC 
+
+Add extra piece D.
+
+Add extra piece E.
+
+    13
+ ********
+*NHHDFFBE*
+*NHCDFBBE*
+*NICCDOOE*
+*IKKMOJJA*
+*IKGGMPJA*
+*EEEGMPPA*
+ ********
+ ABCDEFGH
+ IJKMNOPE 
+
+    14
+ ********
+*NHHDFFBE*
+*NHKDFBBE*
+*NKKIDOOE*
+*CIIMOJJA*
+*CCGGMPJA*
+*EEEGMPPA*
+ ********
+ ABCDEFGH
+ IJKMNOPE 
+
+    15
+ ********
+*NCCBBIIE*
+*NJCBIHLE*
+*NJJOHHLE*
+*PPODMMLA*
+*GPOFDDMA*
+*GGFFEEEA*
+ ********
+ ABCDEFGH
+ IJLMNOPE 
+
+Add extra piece F.
+
+    16
+ ********
+*NCCBBIIF*
+*NJCBIDFF*
+*NJJLLLDD*
 *MMEEEAAA*
 *FFMOHPGG*
 *FOOHHPPG*
  ********
  ABCDEFGH
- ILMNOPGF 
-
-    08
- ********
-*FFBDGLLL*
-*FBBDGGPP*
-*NNNIDOOP*
-*CIIMOAAA*
-*CCGGMHHF*
-*EEEGMHFF*
- ********
- ABCDEFGH
- ILMNOPGF 
-
-
-Add 2 extra pieces G, G.
-Add 2 extra pieces H, A.
-
-    09
- ********
-*FFNNNHHE*
-*FDLLLHKE*
-*ACDDBKKE*
-*ACCBBAAA*
-*AIIOHPGG*
-*IOOHHPPG*
- ********
- ABCDEFGH
- IKLNOPHA 
-
-
-Add 2 extra pieces H, B.
-Add 2 extra pieces H, C.
-
-    10
- ********
-*GCCBBLLL*
-*GGCBDDPP*
-*NNNIIODP*
-*CMIOOAAA*
-*CCMMHHHF*
-*EEEHHHFF*
- ********
- ABCDEFGH
- ILMNOPHC 
-
-
-Add 2 extra pieces H, D.
-Add 2 extra pieces H, E.
-Add 2 extra pieces H, F.
-Add 2 extra pieces H, G.
-Add 2 extra pieces H, H.
-Add 2 extra pieces I, A.
-Add 2 extra pieces I, B.
-Add 2 extra pieces I, C.
-Add 2 extra pieces I, D.
-Add 2 extra pieces I, E.
-Add 2 extra pieces I, F.
-Add 2 extra pieces I, G.
-Add 2 extra pieces I, H.
-Add 2 extra pieces I, I.
-Add 2 extra pieces J, A.
-Add 2 extra pieces J, B.
-Add 2 extra pieces J, C.
-Add 2 extra pieces J, D.
-Add 2 extra pieces J, E.
-Add 2 extra pieces J, F.
-Add 2 extra pieces J, G.
-Add 2 extra pieces J, H.
-Add 2 extra pieces J, I.
-Add 2 extra pieces J, J.
-Add 2 extra pieces K, A.
-Add 2 extra pieces K, B.
-Add 2 extra pieces K, C.
-Add 2 extra pieces K, D.
-Add 2 extra pieces K, E.
-Add 2 extra pieces K, F.
-Add 2 extra pieces K, G.
-Add 2 extra pieces K, H.
-Add 2 extra pieces K, I.
-Add 2 extra pieces K, J.
-Add 2 extra pieces K, K.
-Add 2 extra pieces L, A.
-Add 2 extra pieces L, B.
-Add 2 extra pieces L, C.
-Add 2 extra pieces L, D.
-Add 2 extra pieces L, E.
-Add 2 extra pieces L, F.
-Add 2 extra pieces L, G.
-Add 2 extra pieces L, H.
-Add 2 extra pieces L, I.
-Add 2 extra pieces L, J.
-Add 2 extra pieces L, K.
-Add 2 extra pieces L, L.
-Add 2 extra pieces M, A.
-Add 2 extra pieces M, B.
-Add 2 extra pieces M, C.
-Add 2 extra pieces M, D.
-Add 2 extra pieces M, E.
-Add 2 extra pieces M, F.
-Add 2 extra pieces M, G.
-Add 2 extra pieces M, H.
-Add 2 extra pieces M, I.
-Add 2 extra pieces M, J.
-Add 2 extra pieces M, K.
-Add 2 extra pieces M, L.
-Add 2 extra pieces M, M.
-Add 2 extra pieces N, A.
-Add 2 extra pieces N, B.
-Add 2 extra pieces N, C.
-
-    11
- ********
-*FFABBIIO*
-*FHABIOON*
-*HHAMNNNN*
-*CJJMLLLN*
-*CCJCMPGG*
-*EEECCPPG*
- ********
- ABCEFGHI
- JLMNOPNC 
-
-Add 2 extra pieces N, D.
-Add 2 extra pieces N, E.
-Add 2 extra pieces N, F.
-Add 2 extra pieces N, G.
-Add 2 extra pieces N, H.
-Add 2 extra pieces N, I.
-
-    12
- ********
-*GCCBBLLL*
-*GGCBEEEN*
-*NNNIIPPN*
-*HHIDMMPN*
-*HIIODDMF*
-*IOOAAAFF*
- ********
- ABCDEFGH
- ILMNOPNI 
-
-    13
- ********
-*GCCBBIIO*
-*GGCBIOON*
-*NNNIIPPN*
-*HHIDMMPN*
-*HLLLDDMF*
-*EEEAAAFF*
- ********
- ABCDEFGH
- ILMNOPNI 
-
-Add 2 extra pieces N, J.
-Add 2 extra pieces N, K.
-Add 2 extra pieces N, L.
-Add 2 extra pieces N, M.
-Add 2 extra pieces N, N.
-Add 2 extra pieces O, A.
-
-    14
- ********
-*FFNNNLLL*
-*FDMMEEEB*
-*ACDDMOBB*
-*ACCOOAAA*
-*AIIOHPGG*
-*IOOHHPPG*
- ********
- ABCDEFGH
- ILMNOPOA 
-
-    15
- ********
-*FFNNNIIO*
-*FDMMIOOB*
-*ACDDMOBB*
-*ACCOOAAA*
-*ALLLHPGG*
-*EEEHHPPG*
- ********
- ABCDEFGH
- ILMNOPOA 
-
-Add 2 extra pieces O, B.
-Add 2 extra pieces O, C.
-Add 2 extra pieces O, D.
-Add 2 extra pieces O, E.
-Add 2 extra pieces O, F.
-Add 2 extra pieces O, G.
-Add 2 extra pieces O, H.
-Add 2 extra pieces O, I.
-Add 2 extra pieces O, J.
-Add 2 extra pieces O, K.
-Add 2 extra pieces O, L.
-Add 2 extra pieces O, M.
-Add 2 extra pieces O, N.
-Add 2 extra pieces O, O.
-Add 2 extra pieces P, A.
-Add 2 extra pieces P, B.
-
-    16
- ********
-*FFBBBLLL*
-*FBBBDDPP*
-*NNNIIODP*
-*CMIOOAAA*
-*CCMMHPGG*
-*EEEHHPPG*
- ********
- ABCDEFGH
- ILMNOPPB 
-
-Add 2 extra pieces P, C.
-Add 2 extra pieces P, D.
-Add 2 extra pieces P, E.
-Add 2 extra pieces P, F.
+ IJLMNOPF 
 
     17
  ********
-*FFAPPLLL*
-*FHADPJPP*
-*HHAIDJJP*
-*CIIMDNBB*
-*CCGGMNBF*
-*EEEGMNFF*
+*NCCDFFBE*
+*NJCDFBBE*
+*NJJIDOOE*
+*LIIMOAAA*
+*LPGGMHHF*
+*LPPGMHFF*
  ********
  ABCDEFGH
- IJLMNPPF 
+ IJLMNOPF 
 
     18
  ********
-*FFBPPLLL*
-*FBBDPJPP*
-*NNNIDJJP*
-*CIIMDAAA*
-*CCGGMHHF*
-*EEEGMHFF*
+*NCCDFFBE*
+*NJCDFBBE*
+*NJJIDOOE*
+*LIIMOAAA*
+*LHHFMPGG*
+*LHFFMPPG*
  ********
  ABCDEFGH
- IJLMNPPF 
+ IJLMNOPF 
 
-Add 2 extra pieces P, G.
-Add 2 extra pieces P, H.
-Add 2 extra pieces P, I.
-Add 2 extra pieces P, J.
-Add 2 extra pieces P, K.
-Add 2 extra pieces P, L.
-Add 2 extra pieces P, M.
-Add 2 extra pieces P, N.
-Add 2 extra pieces P, O.
-Add 2 extra pieces P, P.
+    19
+ ********
+*NHHOOIIF*
+*NHOMIDFF*
+*NEEEMMDD*
+*LLLJPPBB*
+*GCCJJPBF*
+*GGCAAAFF*
+ ********
+ ABCDEFGH
+ IJLMNOPF 
+
+    20
+ ********
+*GCCBBIIF*
+*GGCBIDFF*
+*NNNLLLDD*
+*MMEEEJJA*
+*FFMOHPJA*
+*FOOHHPPA*
+ ********
+ ABCDEFGH
+ IJLMNOPF 
+
+    21
+ ********
+*FFBDGCCE*
+*FBBDGGCE*
+*NNNIDOOE*
+*LIIMOJJA*
+*LHHFMPJA*
+*LHFFMPPA*
+ ********
+ ABCDEFGH
+ IJLMNOPF 
+
+    22
+ ********
+*GCCDFFBE*
+*GGCDFBBE*
+*NNNIDOOE*
+*LIIMOJJA*
+*LHHFMPJA*
+*LHFFMPPA*
+ ********
+ ABCDEFGH
+ IJLMNOPF 
+
+    23
+ ********
+*FFNNNPGG*
+*FHCJJPPG*
+*HHCCJEEE*
+*MMDDLLLA*
+*FFMODIBA*
+*FOOIIBBA*
+ ********
+ ABCDEFGH
+ IJLMNOPF 
+
+Add extra piece G.
+
+Add extra piece H.
+
+    24
+ ********
+*FFBDGLLL*
+*FBBDGGKO*
+*NNNIDKKO*
+*CIIHMMOA*
+*CCHHHPMA*
+*EEEHHPPA*
+ ********
+ ABCDEFGH
+ IKLMNOPH 
+
+    25
+ ********
+*NCCDGLLL*
+*NICDGGKO*
+*NIFFDKKO*
+*IBFHMMOA*
+*BBHHHPMA*
+*EEEHHPPA*
+ ********
+ ABCDEFGH
+ IKLMNOPH 
+
+    26
+ ********
+*NHHDGCCE*
+*NHKDGGCE*
+*NKKIDOOE*
+*LIIMOJJA*
+*LHHFMPJA*
+*LHFFMPPA*
+ ********
+ ACDEFGHI
+ JKLMNOPH 
+
+Add extra piece I.
+
+Add extra piece J.
+
+    27
+ ********
+*AAAOOHHE*
+*BBOJJHKE*
+*BDFFJKKE*
+*LDFJMMCC*
+*LPDJJIMC*
+*LPPIINNN*
+ ********
+ ABCDEFHI
+ JKLMNOPJ 
+
+    28
+ ********
+*AAAOOCCE*
+*PDOJJMCE*
+*PPDDJFME*
+*LKKJFFMH*
+*LKBJJIHH*
+*LBBIINNN*
+ ********
+ ABCDEFHI
+ JKLMNOPJ 
+
+    29
+ ********
+*AAAOOHHE*
+*PDOJJHKE*
+*PPDDJKKE*
+*LLLJMMCC*
+*FFBJJIMC*
+*FBBIINNN*
+ ********
+ ABCDEFHI
+ JKLMNOPJ 
+
+    30
+ ********
+*AAAOOHHF*
+*PDOJJHFF*
+*PPDDJEEE*
+*LKKJMMCC*
+*LKBJJIMC*
+*LBBIINNN*
+ ********
+ ABCDEFHI
+ JKLMNOPJ 
+
+Add extra piece K.
+
+Add extra piece L.
+
+    31
+ ********
+*NLLLFFGG*
+*NDMMFICG*
+*NEDDMICC*
+*LEBBIJJA*
+*LEBOHPJA*
+*LOOHHPPA*
+ ********
+ ABCDEFGH
+ IJLMNOPL 
+
+    32
+ ********
+*NCCDFFBE*
+*NICDFBBE*
+*NIHMDOOE*
+*IHHMOJJA*
+*GLLLMPJA*
+*GGLLLPPA*
+ ********
+ ABCDEFGH
+ IJLMNOPL 
+
+    33
+ ********
+*FFBDGLLL*
+*FBBDGGKO*
+*NNNLDKKO*
+*CJJLMMOA*
+*CCJLHPMA*
+*EEEHHPPA*
+ ********
+ ABCDEFGH
+ JKLMNOPL 
+
+    34
+ ********
+*NCCDGLLL*
+*NJCDGGKO*
+*NJJIDKKO*
+*LIIMPPOA*
+*LHHFMPBA*
+*LHFFMBBA*
+ ********
+
+    35
+ ********
+*NCCDGLLL*
+*NJCDGGPP*
+*NJJIDOOP*
+*LIIMOKKA*
+*LHHFMKBA*
+*LHFFMBBA*
+ ********
+ ABCDFGHI
+ JKLMNOPL 
+
+Add extra piece M.
+
+Add extra piece N.
+
+    36
+ ********
+*AAAOOCCE*
+*PDOJJICE*
+*PPDDJIGE*
+*LKKHIMGG*
+*LKHHFFMM*
+*LNNNFNNN*
+ ********
+ ACDEFGHI
+ JKLMNOPN 
+
+    37
+ ********
+*AAAFNHHE*
+*DDFFNHKE*
+*GGDONKKE*
+*LGOJMMCC*
+*LPOJJIMC*
+*LPPIINNN*
+ ********
+ ACDEFGHI
+ JKLMNOPN 
+
+    38
+ ********
+*NCCDFFBE*
+*NJCDFBBE*
+*NJJIDOOE*
+*LIIMOKKH*
+*LPGGMKHH*
+*LPPGMNNN*
+ ********
+ BCDEFGHI
+ JKLMNOPN 
+
+Add extra piece O.
+
+Add extra piece P.
+
+    39
+ ********
+*NCCPPHHF*
+*NJCDPHFF*
+*NJJIDEEE*
+*LIIMDKKA*
+*LPGGMKBA*
+*LPPGMBBA*
+ ********
+
+    40
+ ********
+*NCCPPPGG*
+*NJCDPPPG*
+*NJJIDEEE*
+*LIIMDKKA*
+*LHHFMKBA*
+*LHFFMBBA*
+ ********
+ ABCDEFGH
+ IJKLMNPP 
+
+    41
+ ********
+*NHHDFFBE*
+*NHKDFBBE*
+*NKKMDOOE*
+*LJJMOAAA*
+*LPJCMPGG*
+*LPPCCPPG*
+ ********
+ ABCDEFGH
+ JKLMNOPP 
+
+    42
+ ********
+*NHHOOIIF*
+*NHOMIDFF*
+*NEEEMMDD*
+*PPBBKJJA*
+*GPBKKPJA*
+*GGLLLPPA*
+ ********
+ ABDEFGHI
+ JKLMNOPP 
+
+    43
+ ********
+*NHHDFFBE*
+*NHKDFBBE*
+*NKKIDOOE*
+*LIIMOJJA*
+*LPGGMPJA*
+*LPPGMPPA*
+ ********
+ ABDEFGHI
+ JKLMNOPP 
+
+==============
+
+        01          02          03          04          05          06          07          08
+     ********    ********    ********    ********    ********    ********    ********    ********
+    *AAADGCCE*  *AAAOOHHE*  *AAAOOCCE*  *AAAFAAAE*  *FFNNNHHI*  *NCCBBLLL*  *NCCBBLLL*  *NCCDFFBE*
+    *BBKDGGCE*  *DDOJJHKE*  *PDOJJICE*  *DDFFBBKE*  *FJLLLHIO*  *NDCBBBPP*  *NDCBBBHH*  *NJCDFBBE*
+    *BKKIDOOE*  *ACDLJKKE*  *PPDDJIGE*  *GGDOBKKE*  *AJJCCDIO*  *NIDDBOOP*  *NIDDBFHO*  *NJJIDOOE*
+    *LIIMOJJA*  *ACCLPPBB*  *LKKAIMGG*  *LGOJMMCC*  *AKKMCDOA*  *IKKMOAAA*  *IKKMFFOA*  *LIIMOKKA*
+    *LHHFMPJA*  *AIILGPBF*  *LKBAFFMM*  *LPOJJIMC*  *AKGGMPDA*  *IKGGMHHF*  *IKGGMPOA*  *LPGGMKBA*
+    *LHFFMPPA*  *INNNGGFF*  *LBBAFNNN*  *LPPIINNN*  *EEEGMPPA*  *EEEGMHFF*  *EEEGMPPA*  *LPPGMBBA*
+     ********    ********    ********    ********    ********    ********    ********    ********
+     ABCDEFGH    ABCDEFGH    ABCDEFGI    ABCDEFGI    ACDEFGHI    ABCDEFGH    ABCDEFGH    ABCDEFGI
+     IJKLMOPA    IJKLNOPA    JKLMNOPA    JKLMNOPA    JKLMNOPA    IKLMNOPB    IKLMNOPB    JKLMNOPB 
 
 
+        09          10          11          12          13          14          15          16
+     ********    ********    ********    ********    ********    ********    ********    ********
+    *NCCDGCCE*  *GCCPPCCE*  *NHHDFFBE*  *NHHDGCCE*  *NHHDFFBE*  *NHHDFFBE*  *NCCBBIIE*  *NCCBBIIF*
+    *NJCDGGCE*  *GGCDPJCE*  *NHKDFBBE*  *NHKDGGCE*  *NHCDFBBE*  *NHKDFBBE*  *NJCBIHLE*  *NJCBIDFF*
+    *NJJIDOOE*  *NNNIDJJE*  *NKKMDOOE*  *NKKMDOOE*  *NICCDOOE*  *NKKIDOOE*  *NJJOHHLE*  *NJJLLLDD*
+    *LIIMOKKA*  *LIIMDKKA*  *LLLMOJJA*  *LLLMOJJA*  *IKKMOJJA*  *CIIMOJJA*  *PPODMMLA*  *MMEEEAAA*
+    *LHHFMKBA*  *LHHFMKBA*  *GCCCMPJA*  *FFBCMPJA*  *IKGGMPJA*  *CCGGMPJA*  *GPOFDDMA*  *FFMOHPGG*
+    *LHFFMBBA*  *LHFFMBBA*  *GGCCCPPA*  *FBBCCPPA*  *EEEGMPPA*  *EEEGMPPA*  *GGFFEEEA*  *FOOHHPPG*
+     ********    ********    ********    ********    ********    ********    ********    ********
+     ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH
+     IJKLMNOC    IJKLMNPC    JKLMNOPC    JKLMNOPC    IJKMNOPE    IJKMNOPE    IJLMNOPE    IJLMNOPF 
+
+
+
+        17          18          19          20          21          22          23          24
+     ********    ********    ********    ********    ********    ********    ********    ********
+    *NCCDFFBE*  *NCCDFFBE*  *NHHOOIIF*  *GCCBBIIF*  *FFBDGCCE*  *GCCDFFBE*  *FFNNNPGG*  *FFBDGLLL*
+    *NJCDFBBE*  *NJCDFBBE*  *NHOMIDFF*  *GGCBIDFF*  *FBBDGGCE*  *GGCDFBBE*  *FHCJJPPG*  *FBBDGGKO*
+    *NJJIDOOE*  *NJJIDOOE*  *NEEEMMDD*  *NNNLLLDD*  *NNNIDOOE*  *NNNIDOOE*  *HHCCJEEE*  *NNNIDKKO*
+    *LIIMOAAA*  *LIIMOAAA*  *LLLJPPBB*  *MMEEEJJA*  *LIIMOJJA*  *LIIMOJJA*  *MMDDLLLA*  *CIIHMMOA*
+    *LPGGMHHF*  *LHHFMPGG*  *GCCJJPBF*  *FFMOHPJA*  *LHHFMPJA*  *LHHFMPJA*  *FFMODIBA*  *CCHHHPMA*
+    *LPPGMHFF*  *LHFFMPPG*  *GGCAAAFF*  *FOOHHPPA*  *LHFFMPPA*  *LHFFMPPA*  *FOOIIBBA*  *EEEHHPPA*
+     ********    ********    ********    ********    ********    ********    ********    ********
+     ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH    ABCDEFGH
+     IJLMNOPF    IJLMNOPF    IJLMNOPF    IJLMNOPF    IJLMNOPF    IJLMNOPF    IJLMNOPF    IKLMNOPH 
+
+
+        25          26          27          28          29          30          31          32
+     ********    ********    ********    ********    ********    ********    ********    ********
+    *NCCDGLLL*  *NHHDGCCE*  *AAAOOHHE*  *AAAOOCCE*  *AAAOOHHE*  *AAAOOHHF*  *NLLLFFGG*  *NCCDFFBE*
+    *NICDGGKO*  *NHKDGGCE*  *BBOJJHKE*  *PDOJJMCE*  *PDOJJHKE*  *PDOJJHFF*  *NDMMFICG*  *NICDFBBE*
+    *NIFFDKKO*  *NKKIDOOE*  *BDFFJKKE*  *PPDDJFME*  *PPDDJKKE*  *PPDDJEEE*  *NEDDMICC*  *NIHMDOOE*
+    *IBFHMMOA*  *LIIMOJJA*  *LDFJMMCC*  *LKKJFFMH*  *LLLJMMCC*  *LKKJMMCC*  *LEBBIJJA*  *IHHMOJJA*
+    *BBHHHPMA*  *LHHFMPJA*  *LPDJJIMC*  *LKBJJIHH*  *FFBJJIMC*  *LKBJJIMC*  *LEBOHPJA*  *GLLLMPJA*
+    *EEEHHPPA*  *LHFFMPPA*  *LPPIINNN*  *LBBIINNN*  *FBBIINNN*  *LBBIINNN*  *LOOHHPPA*  *GGLLLPPA*
+     ********    ********    ********    ********    ********    ********    ********    ********
+     ABCDEFGH    ACDEFGHI    ABCDEFHI    ABCDEFHI    ABCDEFHI    ABCDEFHI    ABCDEFGH    ABCDEFGH
+     IKLMNOPH    JKLMNOPH    JKLMNOPJ    JKLMNOPJ    JKLMNOPJ    JKLMNOPJ    IJLMNOPL    IJLMNOPL 
+
+
+        33          34          35          36          37          38          39          40
+     ********    ********    ********    ********    ********    ********    ********    ********
+    *FFBDGLLL*  *NCCDGLLL*  *NCCDGLLL*  *AAAOOCCE*  *AAAFNHHE*  *NCCDFFBE*  *NCCPPHHF*  *NCCPPPGG*
+    *FBBDGGKO*  *NJCDGGKO*  *NJCDGGPP*  *PDOJJICE*  *DDFFNHKE*  *NJCDFBBE*  *NJCDPHFF*  *NJCDPPPG*
+    *NNNLDKKO*  *NJJIDKKO*  *NJJIDOOP*  *PPDDJIGE*  *GGDONKKE*  *NJJIDOOE*  *NJJIDEEE*  *NJJIDEEE*
+    *CJJLMMOA*  *LIIMPPOA*  *LIIMOKKA*  *LKKHIMGG*  *LGOJMMCC*  *LIIMOKKH*  *LIIMDKKA*  *LIIMDKKA*
+    *CCJLHPMA*  *LHHFMPBA*  *LHHFMKBA*  *LKHHFFMM*  *LPOJJIMC*  *LPGGMKHH*  *LPGGMKBA*  *LHHFMKBA*
+    *EEEHHPPA*  *LHFFMBBA*  *LHFFMBBA*  *LNNNFNNN*  *LPPIINNN*  *LPPGMNNN*  *LPPGMBBA*  *LHFFMBBA*
+     ********    ********    ********    ********    ********    ********    ********    ********
+     ABCDEFGH    ABCDFGHI    ABCDFGHI    ACDEFGHI    ACDEFGHI    BCDEFGHI    ABCDEFGH    ABCDEFGH
+     JKLMNOPL    JKLMNOPL    JKLMNOPL    JKLMNOPN    JKLMNOPN    JKLMNOPN    IJKLMNPP    IJKLMNPP 
+
+
+        41          42          43
+     ********    ********    ********
+    *NHHDFFBE*  *NHHOOIIF*  *NHHDFFBE*
+    *NHKDFBBE*  *NHOMIDFF*  *NHKDFBBE*
+    *NKKMDOOE*  *NEEEMMDD*  *NKKIDOOE*
+    *LJJMOAAA*  *PPBBKJJA*  *LIIMOJJA*
+    *LPJCMPGG*  *GPBKKPJA*  *LPGGMPJA*
+    *LPPCCPPG*  *GGLLLPPA*  *LPPGMPPA*
+     ********    ********    ********
+     ABCDEFGH    ABDEFGHI    ABDEFGHI
+     JKLMNOPP    JKLMNOPP    JKLMNOPP 
+
+Solutions with missing:
+	A 38
+	B 05 26 36 37
+	C 42 43
+	D none
+	E 34 
+	F none
+	G 27 28 29 30
+	H 03 04 08 
+	I 11 12 26 33 41
+	J 06 07 24 25
+	L none
+	M 02
+	N 01
+	O 10 39 40
+	P 09
