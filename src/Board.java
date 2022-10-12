@@ -107,7 +107,9 @@ public class Board {
     
     /***
      * Exercise a piece by marching it through each of its positions on the board,
-     * printing the board at each positon. At the end, the board is clear.
+     * printing the board at each positon. At the end, the board is clear. This is 
+     * a test method used to verify that the piece is placed correctly on the Board 
+     * at each of its position.
      * 
      * @param p     The Piece to be exercised
      */
@@ -125,7 +127,7 @@ public class Board {
 
     /****
      * Find all of the possible solutions to a puzzle based on the given set of 
-     * 16 Pieces
+     * 16 Pieces.
      * 
      * @param pieces    The set of 16 pieces to use for the solution(s)
      * @return          Returns true if at least one solution was found, false if not
@@ -137,6 +139,11 @@ public class Board {
         int nPlaced = 0;
         boolean running = true;
         boolean solved = false;
+
+        // This could be made faster by recognizing that not all of the Pieces are necessarily 
+        // distinct and not looking for solutions that just reverse the positions of the 
+        // non-distinct Pieces. But it's fast enough to get me the answer without adding that 
+        // complexity.
         while (running) {
             if (placed[curPiece]) {                         // If the current piece is placed on the board, remove it
                 removePiece(pieces[curPiece]);
@@ -145,7 +152,7 @@ public class Board {
             }
             pieces[curPiece].toNextPosition();              // Move the current piece to its next position
             if (pieces[curPiece].getCurPos() >= 0) {        // If the next position wasn't "not positioned"
-                if (tryToPlace(pieces[curPiece])) {   //   Try to place it. If that works
+                if (tryToPlace(pieces[curPiece])) {         //   Try to place it. If that works
                     placed[curPiece] = true;
                     nPlaced++;
                     if (nPlaced >= pieces.length) {         //     Print the state of the board if enough pieces placed
@@ -169,8 +176,9 @@ public class Board {
     }
 
     /****
-     * Generate all the combinations of Pieces from piece that fit into curComb (i.e., all the combinations of pieces.length 
-     * taken curComb.length at a time), and for each, find all the solutions using the combination of Pieces in cueComb.
+     * Generate all the combinations of Pieces from piece that fit into curComb (i.e., all the 
+     * combinations of pieces.length taken curComb.length at a time), and for each, find all the 
+     * solutions using the combination of Pieces in cueComb.
      * 
      * Many thanks to https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
      * for publishing the algorithm.
@@ -213,7 +221,7 @@ public class Board {
      * requested.
      * 
      * @param extras    The numbers of the Pieces to repeat in the set of Pieces to be used in
-     *                  solving the puzzle. -1 ==> Don't include a repeated Piece.
+     *                  solving the puzzle. null ==> Don't include a repeated Piece.
      */
     public void solve(int[] extras) {
  
@@ -237,7 +245,7 @@ public class Board {
      */
     public void solve(int extra) {
         int[] extras = {extra};
-        solve(extras);
+        solve(extra == -1 ? null : extras);
     }
 
     /**

@@ -413,7 +413,6 @@ public class Piece {
     /****
      * The symbolic names of the Pieces
      ****/
-    public final static int NONE = -1;  // Indication to makePieces that no repeated Piece is wanted
     public final static int A = 0;
     public final static int B = 1;
     public final static int C = 2;
