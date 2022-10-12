@@ -5,7 +5,7 @@ made from three identical type 8 monohedral pentagons joined edge to edge. Type 
 pentagons are one of fifteen classes of irregular pentagons that can tile the plane. 
 (See https://en.wikipedia.org/wiki/Pentagonal_tiling.)
 
-The these pentagons tile in the "wallpaper" style, meaning there is a group of adjacent pentagons 
+These pentagons tile in the "wallpaper" style, meaning there is a group of adjacent pentagons 
 that, taken as a whole, will tile the plane purely by translation (i.e., by duplicating and 
 sliding the group around appropriately). 
 
@@ -19,13 +19,13 @@ tiling. I've labeled the 16 relevant three-pentagon pieces A, B, C, ... O, P.
 ![Drawing of the 16 pieces](doc/ThePieces.png)
 
 Finding solutions to puzzles made from the three-pentagon pieces is not exactly a burning problem, 
-of course, but because the shape of type 8 monohedral pentagons is unusual and because the 
+of course, but because the shape of type 8 monohedral pentagons is unusual, because the 
 way they tile the plane is odd, and because many pieces tend to look like others in the set 
 even though they're different, finding solutions to a real physical instance looks like it should 
 be hard. Since I like hard puzzles, I thought I'd make one.
 
 For a physical puzzle I chose a pleasingly shaped region in the tiling of the pentagons that is 
-8 x 6 pentagons (which would be the right size to hold all 16 of the three-pentagon tiles) to use 
+8 x 6 pentagons (which would be the right size to hold all 16 of the three-pentagon pieces) to use 
 as the "board" on which to fit the pieces. (It's the one in the rows and columns example, below.) 
 Pushing the 16 pieces around in CAD quickly let me know solutions would be rare.
 
@@ -42,12 +42,12 @@ results in some of the common edges degenerating into points and adds constraint
 transformed pieces can be placed on the square tiling. None of this is is too complicated, just 
 tedious to work out correctly.
 
-The result is an earlier version of the program in this repository. It searched for all the ways 
+The result was an earlier version of the program in this repository. It searched for all the ways 
 the 16 pieces can be placed on the board (without overlapping one another, of course). 
 
 There aren't any. 
 
-But, I thought, what if I added a repeat one of the tiles, giving me a set of 17 from which to 
+But, I thought, what if I added a repeat one of the pieces, giving me a set of 17 from which to 
 select 16. Would that relax the constraints enough for there to be solutions? So I modified 
 the program. And, yes, it found some.
 
@@ -132,8 +132,8 @@ repeated. Here they are:
      ABCDEFGH    ABDEFGHI    ABDEFGHI
      JKLMNOPP    JKLMNOPP    JKLMNOPP 
 
-The letters below each solution are the names of the pieces that are used in 
-that solution. The last letter tells which of the pieces was repeated. 
+The letters below each solution are the names of the pieces that are used in that solution. The 
+last letter tells which of the pieces was repeated. 
 
 Here's what the solution repeating piece A and omitting piece N (solution 01) looks like using 
 correctly shaped pieces:
